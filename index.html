@@ -1,3 +1,486 @@
-<html>
-  <h1>Hello</h1>
-</html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KPI App</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script> -->
+  </head>
+  <body>
+<!-- main container -->
+ <div class = "bg-gray-100 min-h-screen">
+
+     <!--Sidebars  -->
+     <div class="flex">
+            <div class="fixed w-20 h-screen p-2 bg-white border-r[1px] flex flex-col justify-between   ">
+    
+                <div class="flex flex-col items-center">
+                    <a href="">
+                        <div class=" p-2 text-white rounded-xl inline-block  " style="background-color:#d1ecf1;" >
+                            <!-- <i class='bx bx-stats' style="font-size:40px;"></i>  -->
+                            <i class='bx bxs-circle alert-info'  style="font-size:40px;"></i>
+                        </div>
+                    </a><l class="font-bold inline-block mt-4" >KPI</l>
+                
+                    <span class="border-b-[1px] border-gray-200 w-full p-2"> </span>
+    
+                    <a href="panel.html">
+                        <div class="bg-gray-100 hover:bg-gray-200 p-2 cursor-pointer my-4 rounded-xl inline-block  " title="Home">
+                                <i class='bx bxs-home-circle text-xl'></i>
+                        </div>
+                    </a>
+    
+                    <a href="">
+                            <div class="bg-gray-100 hover:bg-gray-200 p-2 cursor-pointer my-4 rounded-xl inline-block  " title="fn NA">
+                                     <i class='bx bxs-dashboard text-xl' ></i>
+                            </div>  
+                    </a>
+    
+                    <a href="">
+                            <div class="bg-gray-100 hover:bg-gray-200 p-2 cursor-pointer my-4 rounded-xl inline-block  " title="Export Data">
+                                  <i class='bx bxs-data text-xl' ></i>
+                            </div>
+                    </a>
+    
+    
+                </div>
+            </div>
+            <div class="ml-20  w-full"></div>
+        </div>
+    <!--  Sidebars-->
+
+
+
+
+        <div class="  bg-gray-100 min-h-screen">
+            <div class="ml-20 flex justify-between  px-4 pt-4 ">
+                <h2 class="font-bold">Dashboard</h2>
+                <div class="flex justify-between relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Click to logout"><h2 class="bg-white hover:bg-blue-200 p-2 cursor-pointer my-2 rounded-xl inline-block  text-green-800 font-bold ">
+                        <a href="index.html">
+                        Abhishek &nbsp; </h2>
+                        </a>
+                        <div class="relative">
+                            <img src="/bxs-user-circle.svg" alt="baby with headphones" class="w-12 h-12 rounded-full object-cover">
+                            <span class="absolute h-3 w-3 rounded-full bg-green-600 border-2 border-white-500 top-5 left-0" />
+                         </div>
+                    </div>
+               
+            </div>
+            <div class=" ml-20 grid lg:grid-cols-5 gap-8 p-4">
+                    <div class="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
+                        <div class="flex flex-col w-full pb-4">
+                            <p class="text-2xl font-bold">Year</p>
+                            <p class="text-gray-600">YTD </p>
+                        </div>
+                        <p class=" flex justify-center intems-cneter p-2 rounded-lg alert-info">
+                            <span class=" font-bold text-xl alert-info">120</span>
+                        </p>
+                    </div>
+                    <div class="lg:col-span-2 col-span-1 bg-white flex justify-between w-full border p-4 rounded-lg">
+                        <div class="flex flex-col w-full pb-4">
+                            <p class="text-2xl font-bold">Month</p>
+                            <p class="text-gray-600">MTD</p>
+                        </div>
+                        <p class=" flex justify-center intems-cneter p-2 rounded-lg alert-info">
+                            <span class=" font-bold text-xl alert-info">70</span>
+                        </p>
+                    </div>
+                    <div class="bg-white flex justify-between w-full border p-4 rounded-lg">
+                        <div class="flex flex-col w-full pb-4">
+                            <p class="text-2xl font-bold">Week</p>
+                            <p class="text-gray-600">WTD</p>
+                        </div>
+                        <p class=" flex justify-center intems-cneter p-2 rounded-lg alert-info">
+                            <span class=" text-xl font-bold alert-info">10</span>
+                        </p>
+                    </div>
+            </div> 
+
+
+
+
+
+
+            <div class="ml-20 p-4 grid md:grid-cols-3 grid-cols-1 gap-4  ">
+                 <!-- <div> -->
+                      <div class="w-full md:col-span-2 relative  lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white ">
+                        <h1 class="text-md font-bold">Total Monthly Completions</h1>        
+                        <canvas id="myChart"></canvas>
+                      </div>
+                 <!-- </div>   -->
+                <div class="w-full col-span-1 relative  lg:h-[70vh] h-[50vh] m-auto p-4 border rounded-lg bg-white overflow-scroll"> 
+                    <!-- <h1 class="text-md font-bold">Indicators Table</h1> -->
+
+                    <ul>
+                            <div class="lg:col-span-2 col-span-1 bg-white flex justify-between w-full  p-2 rounded-lg ">
+                            <h1 class="text-md font-bold  p-0 my-0">Indicators Table</h1>
+                            <a href="bg_table.html">
+                            <div  class="bg-gray-100 hover:bg-gray-300 p-4 cursor-pointer my-1 rounded-full inline-block  relative before:z-10 before:absolute before:-left-3 before:top-1/2 before:w-max before:max-w-xs before:-translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-left-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-l-gray-700 after:border-r-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Open table">
+                               
+                                <i class='bx bx-expand-alt font-bold text-[200] '></i>
+                               
+                            </div> </a>
+                            </div>   
+                        </ul>
+                    <ul>
+                     
+                            <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                <!-- first entry  -->
+                                <div class="bg-sky-100 rounded-lg p-3" title="Submitted">
+                                    <i class='text-sky-800 bx bxs-check-circle' ></i> 
+                                </div>
+                                <div class="pl-4">
+                                    <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                             3.2.1 </a>   </p>
+                                    <p class="text-sky-400 text-sm">AS</p>
+                            
+                                </div>
+
+                                <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                                </li>
+                                <!-- first entry  -->
+
+
+
+
+                                  <!-- So on....  -->
+                                <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                
+                                  
+                                <div class="bg-sky-100 rounded-lg p-3" title="Submitted">
+                                    <i class='text-sky-800 bx bxs-check-circle' ></i> 
+                                </div>
+                                <div class="pl-4">
+                                    <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                                8.5.1 </a>   </p>
+                                    <p class="text-sky-400 text-sm">MN</p>
+                            
+                                </div>
+
+                                <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                                </li>
+                                <!-- So on....  -->
+
+           <!-- So on....  -->
+           <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                
+                                  
+                <div class="bg-sky-100 rounded-lg p-3" title="Submitted">
+                    <i class='text-sky-800 bx bxs-check-circle' ></i> 
+                </div>
+                <div class="pl-4">
+                    <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                5.1.7 </a>   </p>
+                    <p class="text-sky-400 text-sm">AN</p>
+            
+                </div>
+
+                <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                </li>
+                <!-- So on....  -->
+
+                           <!-- So on....  -->
+                           <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                
+                                  
+                                <div class="bg-sky-100 rounded-lg p-3" title="Submitted">
+                                    <i class='text-sky-800 bx bxs-check-circle' ></i> 
+                                </div>
+                                <div class="pl-4">
+                                    <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                                17.1.1 </a>   </p>
+                                    <p class="text-sky-400 text-sm">UZ</p>
+                            
+                                </div>
+
+                                <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                                </li>
+                                <!-- So on....  -->
+
+                                           <!-- So on....  -->
+                                           <!-- <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                
+                                  
+                                                <div class="alert-info rounded-full p-3 relative before:z-10 before:absolute before:-right-3 before:top-1/2 before:w-max before:max-w-xs before:translate-x-full before:-translate-y-1/2 before:rounded-md before:bg-gray-700 before:px-3 before:py-2 before:text-white before:invisible before:content-[attr(data-tip)] after:z-10 after:absolute after:-right-[0.8rem] after:top-1/2 after:h-0 after:w-0 after:translate-x-0 after:-translate-y-1/2 after:border-8 after:border-r-gray-700 after:border-l-transparent after:border-b-transparent after:border-t-transparent after:invisible hover:before:visible hover:after:visible" data-tip="Submitted by AS" title="Submitted">
+                                                    <i class='alert-info ' >AS</i> 
+                                                </div>
+                                                <div class="pl-4">
+                                                    <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                                                1.1.2 </a>   </p>
+                                                    <p class="text-sky-400 text-sm">AC</p>
+                                            
+                                                </div>
+                
+                                                <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                                                </li> -->
+                                                <!-- So on....  -->
+
+                                                           <!-- So on....  -->
+                                <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                
+                                  
+                                        <div class="bg-sky-100 rounded-lg p-3" title="Submitted">
+                                            <i class='text-sky-800 bx bxs-check-circle' ></i> 
+                                        </div>
+                                        <div class="pl-4">
+                                            <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                                        7.1.3 </a>   </p>
+                                            <p class="text-sky-400 text-sm">AS</p>
+                                    
+                                        </div>
+        
+                                        <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                                        </li>
+                                        <!-- So on....  -->
+
+                                                   <!-- So on....  -->
+                                <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                
+                                  
+                                        <div class="bg-sky-100 rounded-lg p-3" title="Submitted">
+                                            <i class='text-sky-800 bx bxs-check-circle' ></i> 
+                                        </div>
+                                        <div class="pl-4">
+                                            <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                                        2.1.1 </a>   </p>
+                                            <p class="text-sky-400 text-sm">AS</p>
+                                    
+                                        </div>
+        
+                                        <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                                        </li>
+                                        <!-- So on....  -->
+
+                                                   <!-- So on....  -->
+                                <li  class="bg-gray-50 hover:bg-gray-100 rounded-lg my-3 p-2 flex items-center cursor-pointer"> 
+                                
+                                  
+                                        <div class="bg-sky-100 rounded-lg p-3" title="Submitted">
+                                            <i class='text-sky-800 bx bxs-check-circle' ></i> 
+                                        </div>
+                                        <div class="pl-4">
+                                            <p  class="text-sky-800 font-bold"><a href="dashun.html" class="inline-flex items-center font-medium text-black-600 dark:text-sky-500 hover:underline">
+                                                        7.9.1 </a>   </p>
+                                            <p class="text-sky-400 text-sm">AS</p>
+                                    
+                                        </div>
+        
+                                        <p class="lg:flex md:hidden absolute right-6 text-sm font-bold pr-4">12-04-2023</p>
+                                        </li>
+                                        <!-- So on....  -->
+
+
+
+
+                    </ul>
+                </div>   
+                    
+            </div>
+        </div>
+
+     
+
+    
+   
+</div>
+<!-- main container End-->    
+ 
+
+                
+            <!-- chart configs all -->
+            <script>
+                const data = [
+  {
+    id: 1,
+    name: {
+      first: 'John',
+      last: 'Smith',
+    },
+    total: 2795.95,
+    status: 'On Hold',
+    method: 'PayPal',
+    date: '15 Minutes ago',
+  },
+  {
+    id: 2,
+    name: {
+      first: 'Chris',
+      last: 'Adams',
+    },
+    total: 1195.95,
+    status: 'Processing',
+    method: 'PayPal',
+    date: '23 Minutes ago',
+  },
+  {
+    id: 3,
+    name: {
+      first: 'Sarah',
+      last: 'Smith',
+    },
+    total: 495.85,
+    status: 'Completed',
+    method: 'Visa',
+    date: '1 Hour ago',
+  },
+  {
+    id: 4,
+    name: {
+      first: 'Joseph',
+      last: 'Choo',
+    },
+    total: 150.45,
+    status: 'Processing',
+    method: 'MasterCard',
+    date: '1 Hour ago',
+  },
+  {
+    id: 5,
+    name: {
+      first: 'Steve',
+      last: 'Harding',
+    },
+    total: 175.25,
+    status: 'On Hold',
+    method: 'PayPal',
+    date: '2 Hour ago',
+  },
+  {
+    id: 6,
+    name: {
+      first: 'Laura',
+      last: 'Croft',
+    },
+    total: 1295.75,
+    status: 'Completed',
+    method: 'Check',
+    date: '3 Hour ago',
+  },
+  {
+    id: 7,
+    name: {
+      first: 'Michael',
+      last: 'Jones',
+    },
+    total: 89.95,
+    status: 'Completed',
+    method: 'MasterCard',
+    date: '3 Hour ago',
+  },
+  {
+    id: 8,
+    name: {
+      first: 'James',
+      last: 'Bond',
+    },
+    total: 689.45,
+    status: 'Completed',
+    method: 'Visa',
+    date: '7 Hour ago',
+  },
+  {
+    id: 9,
+    name: {
+      first: 'Haley',
+      last: 'Whiting',
+    },
+    total: 14.99,
+    status: 'Completed',
+    method: 'PayPal',
+    date: '1 Day ago',
+  },
+  {
+    id: 10,
+    name: {
+      first: 'Tim',
+      last: 'Thomas',
+    },
+    total: 218.99,
+    status: 'Completed',
+    method: 'MasterCard',
+    date: '1 Day ago',
+  },
+];
+
+                        const ctx = document.getElementById('myChart');
+                        const months_labels = ["January", "February", "March", "April", "May",
+                                        "June", "July", "August", "September", "October", "November", "December"];
+                        console.log(months_labels)
+
+                        
+                        new Chart(ctx, {
+                          type: 'line',
+                          data: {
+                            labels: months_labels,
+                            datasets: [{
+                              label: 'Total numbers',
+                              data: [1,2,3, 5,3, 4,5,2,3,3,4,5],
+                              borderWidth: 1,
+                              tension: 0.4,
+                              backgroundColor:'rgb(12, 84, 96)',
+                              borderColor: 'rgb(12, 84, 96)',
+                              
+                            }]  
+                          },
+                          options: {
+                            scales: {
+                              y: {
+                                beginAtZero: false,
+                                grid: {
+                                    drawOnChartArea:false
+                                    }
+                              },
+                              x: {
+                                    grid: {
+                                    drawOnChartArea:true // make grid appear true
+                                    }
+ 
+                            }
+                        },
+                            elements: {
+                                    point: {
+                                    radius: 5,
+                                    hoverRadius:15 // ex.: to make it bigger when user hovers put larger number than radius.
+                                    }
+                                },
+                            // plugins:{
+                            // title:{
+                            //     display:true,
+                            //     text:'Total Monthly Completions'
+                            //       }
+                            //     }, 
+                            pointHitRadius:45, 
+                            pointHoverBackgroundColor:'rgb(13, 41, 47)',
+                            pointHoverBorderColor:'rgb(13, 41, 47)',
+                            maintainAspectRatio:false,
+                            responsive:true
+                          }
+                        });
+                      </script>
+                <!-- chart configs all -->
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://kit.fontawesome.com/8fd20d9b41.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> 
+<!-- <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script> -->
+<script src="./static/js/chart.js"></script>
+</body>
+</html>>
